@@ -116,7 +116,7 @@ The following starter files were included and then expanded with custom logic an
 
 ## Resources and References
 
-[Python Official Documentation – datetime](https://docs.python.org/3/library/datetime.html)
-[Real Python – Modules and Packages](https://realpython.com/python-modules-packages/)
-[Flatiron School – Module 6: Functions and Input Validation](https://flatironschool.com/courses/792/modules) _requires credentials for access_
-[MDN – Program Flow Basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
+- [Python Official Documentation – datetime](https://docs.python.org/3/library/datetime.html)
+- [Real Python – Modules and Packages](https://realpython.com/python-modules-packages/)
+- [Flatiron School – Module 6: Functions and Input Validation](https://flatironschool.com/courses/792/modules) _requires credentials for access_
+- [MDN – Program Flow Basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals)
