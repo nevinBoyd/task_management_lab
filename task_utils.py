@@ -39,7 +39,7 @@ def mark_task_as_complete(index, tasks=tasks):
     
     # Mark task is done
     tasks[index - 1]["completed"] = True
-    print(f"Task '{tasks[index - 1]['title']}' marked as complete!")
+    print(f"Task '{tasks[index - 1]['title']}' marked as completed!")
 
 # Implement view_pending_tasks function
 def view_pending_tasks(tasks=tasks):
@@ -58,6 +58,6 @@ def calculate_progress(tasks=tasks):
     if not tasks:
         return 0
     
-    completed =sum(1 for task in tasks if task["complete"])
+    completed =sum(1 for task in tasks if task["completed"])
     progress = round((completed / len(tasks)) * 100, 2)
     return progress
