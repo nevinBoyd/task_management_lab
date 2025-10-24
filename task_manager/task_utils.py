@@ -23,7 +23,7 @@ def add_task(title, description, due_date):
        "title": title,
        "description": description,
        "due_date": due_date,
-       "completed": False
+       "complete": False
     }
 
     # Add to global task list
@@ -38,12 +38,12 @@ def mark_task_as_complete(index, tasks=tasks):
        return
     
     # Mark task is done
-    tasks[index - 1]["completed"] = True
-    print(f"Task '{tasks[index - 1]['title']}' marked as completed!")
+    tasks[index - 1]["complete"] = True
+    print(f"Task '{tasks[index - 1]['title']}' marked as complete!")
 
 # Implement view_pending_tasks function
 def view_pending_tasks(tasks=tasks):
-    pending = [task for task in tasks if not task["completed"]]
+    pending = [task for task in tasks if not task["complete"]]
 
     if not pending:
        print("No pending tasks.")
@@ -58,6 +58,6 @@ def calculate_progress(tasks=tasks):
     if not tasks:
         return 0
     
-    completed =sum(1 for task in tasks if task["completed"])
-    progress = round((completed / len(tasks)) * 100, 2)
+    complete =sum(1 for task in tasks if task["complete"])
+    progress = round((complete / len(tasks)) * 100, 2)
     return progress
