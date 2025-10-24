@@ -59,5 +59,5 @@ def calculate_progress(tasks=tasks):
         return 0
     
     completed =sum(1 for task in tasks if task["complete"])
-    progress = round((complete / len(tasks)) * 100, 2)
+    progress = round((completed / len(tasks)) * 100, 2)
     return progress
