@@ -1,6 +1,5 @@
-# Import functions from task_manager.task_utils package
 from task_manager.task_utils import add_task, mark_task_as_complete, view_pending_tasks, calculate_progress
-# Define the main function
+
 def main():
     while True:
         print("Task Management System")
@@ -13,38 +12,29 @@ def main():
         choice = input("Enter your choice (1-5): ")
 
         if choice == "1":
-           # Gather task input
-           title = input("Enter task title: ")
-           description = input("Enter task desription: ")
-           due_date = input("Enter due date (YYYY-MM-DD): ")
-           
-           # Add new task
-           add_task(title, description, due_date)
+            title = input("Enter task title: ")
+            description = input("Enter task description: ")
+            due_date = input("Enter due date (YYYY-MM-DD): ")
+            add_task(title, description, due_date)
 
         elif choice == "2":
-           # View tasks to mark complete
-           view_pending_tasks()
-           index = int(input("Enter the number to mark as complete: "))
-   
-           # Mark as complete
-           mark_task_as_complete(index)
+            view_pending_tasks()
+            index = int(input("Enter the number to mark as complete: "))
+            mark_task_as_complete(index)
 
         elif choice == "3":
-           # View pending tasks
-           view_pending_tasks()
+            view_pending_tasks()
 
         elif choice == "4":
-            # View progress
-            progress= calculate_progress()
-            print(f"Task completion progress: {progress}%")    
+            progress = calculate_progress()
+            print(f"Task completion progress: {progress}%")
 
-        elif choice == "5":            
+        elif choice == "5":
             print("Exiting the program...")
             break
 
         else:
             print("Invalid choice. Please try again.")
 
-# Run main if executed directly
 if __name__ == "__main__":
     main()

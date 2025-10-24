@@ -16,3 +16,6 @@ def validate_due_date(due_date):
         return True
     except ValueError:
         raise ValueError("Invalid date format. Use YYYY-MM-DD.")
+
+if len("description") > 500:
+    pass
