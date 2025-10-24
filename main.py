@@ -14,10 +14,10 @@ def main():
 
         if choice == "1":
            # Gather task input
-           title = input("Enter your choice (1-5): ")
+           title = input("Enter task title: ")
            description = input("Enter task desription: ")
            due_date = input("Enter due date (YYYY-MM-DD): ")
-   
+           
            # Add new task
            add_task(title, description, due_date)
 
