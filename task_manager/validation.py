@@ -1,21 +1,18 @@
 from datetime import datetime
 
-# Validate the title is not empty
 def validate_task_title(title):
-    if title and len(title.strip()) > 0:
-        return True
-    return False
+    if not title or len(title.strip()) == 0:
+        raise ValueError("Title cannot be empty.")
+    return True
 
-# Validate description >= 5 characters
 def validate_task_description(description):
-    if description and len(description.strip()) >= 5:
-        return True
-    return False
+    if not description or len(description.strip()) < 5:
+        raise ValueError("Description must be at least 5 characters long.")
+    return True
 
-# Validate due date 
 def validate_due_date(due_date):
     try:
         datetime.strptime(due_date, "%Y-%m-%d")
         return True
     except ValueError:
-        return False
+        raise ValueError("Invalid date format. Use YYYY-MM-DD.")
