@@ -29,7 +29,7 @@ def mark_task_as_complete(index, tasks=tasks):
         print("Invalid task number.")
         return
     tasks[index - 1]["completed"] = True
-    print(f"Task '{tasks[index - 1]['title']}' marked as complete!")
+    print(f"Task marked as complete!")
 
 def view_pending_tasks(tasks=tasks):
     pending = [task for task in tasks if not task["completed"]]
